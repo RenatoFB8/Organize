@@ -1,0 +1,820 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap');
+
+:root{
+    --corPrimaria:#7C5DF5;
+    --corSecundaria: #242d52 ;
+    --cinza:#9095a7;
+    --azulEscuro:#1d1e25;
+    --laranjaClaro:#7c5df559;
+    --cinzaClaro:#fafafa;
+
+    --font:'Be Vietnam Pro', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+
+body{
+    background-image: url(./images/bg-tablet-pattern.svg);
+    background-position: -4% -2%;
+    background-repeat: no-repeat;
+    background-size: 160%;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 3.5rem 2rem; 
+    background-color: transparent;
+    z-index: 1;
+    width: 100vw;
+}
+
+header .botao{
+    display: none;
+}
+
+.logoIcon{
+    width: 8rem;
+}
+
+@media only screen and (max-width: 992px) {
+
+
+nav{
+    background-color: var(--cinzaClaro);
+    position: fixed;
+    display: none;
+    justify-content: space-between;
+    width: 5rem;
+    font-weight: 700;
+    flex-direction: column;
+    right: 50%;
+    transform: translate(50%, -15%);
+    top: 10rem;
+    z-index: 999;
+    height: 75vh;
+    width: 75vw;
+    padding: 2rem;
+    border-radius: 10px;
+    transition: all ease-in-out 1s;
+}
+
+nav button{
+    background-color: transparent;
+    border: none;
+    color: var(--corSecundaria);
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all linear 0.1s;
+}
+
+nav button:hover , nav button:target , footer li:hover , footer li:target{
+    opacity: 0.60;
+    scale: 0.99;
+    cursor: pointer;
+}
+}
+.openButton{
+    position: relative;
+    z-index: 999;
+    transition: all linear 0.1s;
+}
+
+
+
+.closeButton{
+    width: 1.5rem;
+    display: none;
+    z-index: 999;
+    position: fixed;
+    right: 2rem;
+    transition: all linear 0.1s;
+}
+
+.closeButton:hover , .openButton:hover{
+    scale: 1.1;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.opacidade{
+    background-color: #00000050;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 998;
+    display: none;
+}
+
+
+.flex{
+    display:flex;
+}
+
+.none{
+    display: none;
+}
+
+
+main{
+    width: 100vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    z-index: 2;
+}
+
+.intro{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.decoracao1{
+    position: absolute;
+    width: 160%;
+    top: -15%;
+    left: 5%;
+    z-index: 0;
+}
+
+.animacao{
+    width: 100%;
+    z-index: 1;
+    position: relative;
+}
+
+.introConteudo{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+.introConteudo h1{
+    font-weight: 700;
+    color: var(--corSecundaria);
+    font-size: 2rem;
+    z-index: 1;
+}
+
+.introConteudo p, .diferencialTextos p, .comentarios p{
+    color: var(--cinza);
+    z-index: 1;
+    max-width: 80%;
+}
+
+.botao{
+    background-color: var(--corPrimaria);
+    padding: 1rem;
+    width: 50%;
+    border: none;
+    border-radius: 25px;
+    color: var(--cinzaClaro);
+    font-weight: 700;
+    z-index: 1;
+    -webkit-box-shadow: 0px 10px 20px 0px #7C5DF5b3;
+    -moz-box-shadow: 0px 10px 20px 0px #7C5DF5b3;
+    box-shadow: 0px 10px 20px 0px #7C5DF5b3;
+    transition: all linear 0.1s;
+}
+
+.botao:hover, .botaoInvertido:hover, input[type=button]:hover{
+    opacity: 0.75;
+    scale: 0.99;
+    cursor: pointer;
+}
+
+.decoracao2{
+    position: absolute;
+    width: 100%;
+    top: 15%;
+    left: 60%;
+    z-index: 0;
+}
+
+.diferencial{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    gap: 4rem;
+}
+
+.diferencialTextos , .comentarios , .pessoas, .encerramento{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+.diferencialTextos h2 , .comentarios h2{
+    font-weight: 700;
+    color: var(--corSecundaria);
+    font-size: 1.75rem;
+    max-width: 90%;
+    z-index: 1;
+    counter-reset: section;
+}
+
+.diferencialLista{
+    padding: 0 1rem; 
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    counter-reset: section;
+}
+
+.diferencialLista h3{
+    background-color: var(--laranjaClaro);
+    width: calc(100vw - 1.5rem);
+    font-size: 0.9rem;
+    color: var(--corSecundaria);
+    padding: 0.5rem 0;
+    border-radius: 25px 0 0 25px;
+    white-space: nowrap;
+}
+
+.diferencialLista p{
+    font-size: 0.8rem;
+    color: var(--cinza);
+}
+
+.diferencialLista h3::before{
+    content: "0"counter(section);
+    counter-increment: section;
+    font-weight: bold;
+    background-color: var(--corPrimaria);
+    border-radius:25px ;
+    padding: 0.5rem 1rem;
+    color: var(--cinzaClaro);
+    margin-right: 0.2rem;
+}
+
+.pessoas{
+    background-color: var(--cinzaClaro);
+    margin-top: 4rem;
+    padding: 1rem;
+    gap: 1rem;
+    justify-content: space-around;
+}
+
+.pessoas img{
+    width: 8rem;
+    position: relative;
+    top: -4rem;
+}
+
+.pessoas h3{
+    font-size: 1rem;
+    color: var(--corSecundaria);
+}
+
+.pessoas h3, .pessoas p{
+    position: relative ;
+    top: -4rem;
+    max-width: 100%;
+}
+
+#pessoa2{
+    display: none;
+}
+
+#pessoa3{
+    display: none;
+}
+
+.carrosel{
+    display: flex;
+    justify-content: space-between;
+    width: 5rem;
+}
+
+.bolinha{
+    border: solid var(--corPrimaria) 1px;
+    border-radius: 360px;
+    padding: 0.4rem;
+    display: inline-block;
+}
+
+#bolinhaSelecionada{
+    background-color: var(--corPrimaria);
+}
+
+.encerramento{
+    background-color: var(--corPrimaria);
+    height: 20rem;
+    width: 100vw;
+    justify-content: center;
+    position: relative;
+}
+
+.encerramento h1{
+    font-weight: 700;
+    color: var(--cinzaClaro);
+    font-size: 2rem;
+    z-index: 1;
+    max-width: 85%;
+}
+
+.botaoInvertido{
+    background-color: var(--cinzaClaro);
+    padding: 1rem;
+    width: 50%;
+    border: none;
+    border-radius: 25px;
+    color: var(--corPrimaria);
+    font-weight: 700;
+    transition: all linear 0.1s;
+}
+
+.decoracao3{
+    position: absolute;
+    width: 25%;
+    top: 20%;
+    left: 0%;
+    z-index: 0;
+}
+
+footer{
+    background-color: var(--azulEscuro);
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    width: 100vw;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}   
+
+input{
+    border: none;
+    border-radius:25px ;
+    padding: 1rem 1rem;
+}
+
+input[type=email]{
+    width: 70%;
+}
+
+input[type=button]{
+    background-color: var(--corPrimaria);
+    color: var(--cinzaClaro);
+    padding: 1rem 1.5rem;
+    transition: all linear 0.1s;
+}
+
+footer ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-height: 5rem;
+    justify-items: center;
+    column-gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+footer li{
+    list-style: none;
+    color: var(--cinzaClaro);
+    margin-bottom: 1rem;
+    transition: all linear 0.1s;
+}
+
+footer li:hover , footer li:target{
+    opacity: 0.60;
+    scale: 0.99;
+    cursor: pointer;
+}
+
+.redesSociais{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.redesSociais img{
+    width: 2rem;
+    transition: all ease-in-out 0.1s;
+    cursor: pointer;
+}
+
+.logoIconFooter{
+    width: 10rem;
+}
+
+.copyright{
+    font-size: 0.75rem;
+    color: var(--cinza);
+}
+
+
+#facebook:hover{
+    filter: invert(35%) sepia(62%) saturate(566%) hue-rotate(181deg) brightness(96%) contrast(89%);
+    transform: translateY(-0.5rem);
+}
+
+#instagram:hover{
+    filter: brightness(0) saturate(100%) invert(51%) sepia(85%) saturate(3095%) hue-rotate(337deg) brightness(101%) contrast(92%);
+    transform: translateY(-0.5rem);
+}
+
+#twitter:hover{
+    filter: brightness(0) saturate(100%) invert(46%) sepia(95%) saturate(1007%) hue-rotate(176deg) brightness(97%) contrast(96%);
+    transform: translateY(-0.5rem);
+}
+
+#youtube:hover{
+    filter: brightness(0) saturate(100%) invert(21%) sepia(89%) saturate(6959%) hue-rotate(357deg) brightness(96%) contrast(112%);
+    transform: translateY(-0.5rem);
+}
+
+#pinterest:hover{
+    filter: brightness(0) saturate(100%) invert(10%) sepia(98%) saturate(7401%) hue-rotate(348deg) brightness(89%) contrast(102%);
+    transform: translateY(-0.5rem);
+}
+
+@media only screen and (min-width: 600px) {
+    body{
+        background-image: url(./images/bg-tablet-pattern.svg);
+        background-position: 23rem -12%;
+        background-repeat: no-repeat;
+        background-size: 90%;
+    }
+
+    .logoIcon{
+        width: 15rem;
+    }
+
+    #hamburguerIcon{
+        width: 2rem;
+    }
+
+    .intro{
+        position: relative;
+        display: flex;
+        gap: 4rem;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    .animacao{
+        width: 50%;
+        z-index: 1;
+        position: relative;
+    }
+
+    .introConteudo {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        position: relative;
+        width: 50%;
+    }
+
+    .diferencial{
+        flex-direction: row;
+        align-items: center;
+        padding: 0px 4rem;
+        margin: 0 1rem;
+    }
+
+    .diferencialLista {
+        width: 50%;
+    }
+
+    .diferencialLista h3{
+        font-size: 0.9rem;
+        color: var(--corSecundaria);
+        padding: 0.5rem 0;
+        border-radius: 25px 0 0 25px;
+        white-space: nowrap;
+        background-color: transparent;
+        width: auto;
+    }
+
+    .diferencialTextos{
+        width: 50%;
+        text-align: left;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .pessoasConteiner{
+        display: flex;
+        justify-content: center;
+    }
+
+    .pessoas{
+        width: 75%;
+    }
+    
+    
+}
+
+
+@media only screen and (min-width: 992px) {
+
+    body{
+        background-image: url(./images/bg-tablet-pattern.svg);
+        background-position: 30rem -25%;
+        background-repeat: no-repeat;
+        background-size: 90%;
+    }
+
+    .logoIcon{
+        width: 10rem;
+    }
+
+    header{
+        align-items: center;
+        padding: 3.5rem 4rem;
+    }
+
+    header .botao{
+        width: 10%;
+        padding: 0.75rem 1rem;
+        font-size: 0.6rem;
+        display: block;
+    }
+
+    #hamburguerIcon{
+        display: none;
+    }
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+        width: 25rem;
+        font-weight: 700;
+    }
+
+    nav button{
+        background-color: transparent;
+        border: none;
+        color: var(--corSecundaria);
+        transition: all linear 0.1s;
+
+    }
+
+    nav button:hover , nav button:target , footer li:hover , footer li:target{
+        opacity: 0.6;
+        scale: 0.99;
+        cursor: pointer;
+    }
+
+    .intro{
+        position: relative;
+        display: flex;
+        gap: 4rem;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    .animacao{
+        width: 50%;
+        z-index: 1;
+        position: relative;
+    }
+
+    .introConteudo {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        position: relative;
+        width: 50%;
+    }
+
+    .diferencial{
+        flex-direction: row;
+        align-items: center;
+        padding: 0px 4rem;
+        margin: 0 1rem;
+    }
+
+    .diferencialLista {
+        width: 50%;
+    }
+
+    .diferencialLista h3{
+        font-size: 0.9rem;
+        color: var(--corSecundaria);
+        padding: 0.5rem 0;
+        border-radius: 25px 0 0 25px;
+        white-space: nowrap;
+        background-color: transparent;
+        width: auto;
+    }
+
+    .diferencialTextos{
+        width: 50%;
+    }
+
+    .diferencialTextos h2 , .comentarios h2{
+        font-weight: 700;
+        color: var(--corSecundaria);
+        font-size: 2rem;
+        max-width: 90%;
+        z-index: 1;
+        counter-reset: section;
+    }
+
+    .introConteudo{
+        padding: 0 2.5rem;
+        text-align: center;
+        align-items: flex-start;
+        gap: 1rem;
+        width: 50%;
+    }
+
+    .introConteudo h1{
+        font-weight: 700;
+        color: var(--corSecundaria);
+        font-size: 3rem;
+        z-index: 1;
+        text-align: left;
+    }
+
+    .introConteudo p{
+        text-align: left;
+    }
+
+    .encerramento{
+        flex-direction: row;
+        padding: 0px 2rem;
+    }
+
+    .encerramento h1{
+        font-weight: 700;
+        color: var(--cinzaClaro);
+        font-size: 2rem;
+        z-index: 1;
+        max-width: 85%;
+        text-align: left;
+
+    }
+
+    .botaoInvertido{
+        padding: 1rem 1rem;
+        width: 25%;
+        margin-left: 25%;
+    }
+
+    .pessoasConteiner{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    #pessoa2{
+        display: flex;
+    }
+    
+    #pessoa3{
+        display: flex;
+    }
+
+    .bolinha{
+        display: none;
+    }
+
+    .encerramento{
+        background-image: url(./images/bg-simplify-section-desktop.svg);
+        background-position: -8rem 0;
+    }
+
+    .decoracao3{
+        display: none;
+    }
+
+    footer{
+        display: grid;
+        grid-template-areas: 
+        "logo links form"
+        "redes links copyright";
+        justify-items: center;
+        align-content: center;
+        align-items: start;
+        justify-content: space-around;
+        height: 20rem;
+    }
+
+    .logoIconFooter{
+        grid-area: logo;
+    }
+
+    footer ul{
+        grid: links;
+    }
+
+    footer form{
+        grid-area: form;
+    }
+
+    .redesSociais{
+        grid-area: redes;
+    }
+
+    .copyright{
+        grid-area: copyright;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    body{
+        background-image: url(./images/bg-tablet-pattern.svg);
+        background-position: 40rem -35%;
+        background-repeat: no-repeat;
+        background-size: 90%;
+    }
+
+    .logoIcon{
+        width: 15rem;
+    }
+
+    header{
+        align-items: center;
+        padding: 3.5rem 4rem;
+    }
+
+    header .botao{
+        width: 10%;
+        padding: 1rem 1.25rem;
+        font-size: 0.8rem;
+        display: block;
+    }
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+        width: 30rem;
+        font-weight: 700;
+    }
+
+    nav button{
+        background-color: transparent;
+        border: none;
+        color: var(--corSecundaria);
+        transition: all linear 0.1s;
+        font-size: 1rem;
+    }
+
+    .introConteudo h1{
+        font-weight: 700;
+        color: var(--corSecundaria);
+        font-size: 4rem;
+        z-index: 1;
+        text-align: left;
+    }
+
+    .introConteudo p, .diferencialTextos p, .comentarios p{
+        color: var(--cinza);
+        z-index: 1;
+        max-width: 80%;
+        font-size: 1.5rem;
+    }
+
+    .diferencialTextos h2 , .comentarios h2{
+        font-weight: 700;
+        color: var(--corSecundaria);
+        font-size: 3rem;
+        max-width: 90%;
+        z-index: 1;
+        counter-reset: section;
+    }
+
+    .diferencialLista h3{
+        font-size: 1.25rem;
+    }
+
+    .diferencialLista p{
+        font-size: 1.2rem;
+    }
+
+    .pessoas h3{
+        font-size: 2rem;
+    }
+}
+
+
