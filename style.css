@@ -5,7 +5,7 @@
     --corSecundaria: #242d52 ;
     --cinza:#9095a7;
     --azulEscuro:#1d1e25;
-    --laranjaClaro:#7c5df559;
+    --roxoEscuro:#7c5df559;
     --cinzaClaro:#fafafa;
 
     --font:'Be Vietnam Pro', sans-serif;
@@ -287,6 +287,10 @@ main{
     position: relative ;
     top: -4rem;
     max-width: 100%;
+}
+
+#pessoa1{
+    display: flex;
 }
 
 #pessoa2{
@@ -685,6 +689,14 @@ footer li:hover , footer li:target{
         display: flex;
         flex-direction: row;
         gap: 1rem;
+    }
+
+    .pessoas{
+        display: flex;
+    }
+
+    #pessoa1{
+        display: flex;
     }
 
     #pessoa2{
