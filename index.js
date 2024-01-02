@@ -6,7 +6,8 @@ const opacidade = document.querySelector("#opacidade")
 const bolinhas = document.querySelectorAll(".bolinha")
 const pessoas = document.querySelectorAll(".pessoas")
 
-console.log(bolinhas);
+
+//Abrir menu hambuguer
 
 openButton.addEventListener("click", function () {
     menu.classList.add("flex");
@@ -15,12 +16,17 @@ openButton.addEventListener("click", function () {
     opacidade.classList.add("flex");
 })
 
+//Fechar menu hambuguer
+
 closeButton.addEventListener("click", function () {
     menu.classList.remove("flex");
     openButton.classList.remove("none");
     closeButton.classList.remove("flex");
     opacidade.classList.remove("flex");
 })
+
+
+//Evento de trocar slider
 
 bolinhas.forEach((bolinha, index) => {
     bolinha.addEventListener("click", function () {
@@ -33,6 +39,8 @@ bolinhas.forEach((bolinha, index) => {
     })
 
 })
+
+// Reseta o estilo do slider aplicado pelo JS quando a tela tiver mais que 992px de largura
 
 window.addEventListener("resize", function () {
     if (window.innerWidth > 992) {

@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap');
 
+
+/* #region Variaveis */
+
 :root{
     --corPrimaria:#7C5DF5;
     --corSecundaria: #242d52 ;
@@ -11,6 +14,9 @@
     --font:'Be Vietnam Pro', sans-serif;
 }
 
+/* #endregion */
+
+/* #region Reset */
 *{
     padding: 0;
     margin: 0;
@@ -18,6 +24,9 @@
     font-family: var(--font);
 }
 
+/* #endregion*/
+
+/* #region Mobile*/
 body{
     background-image: url(./images/bg-tablet-pattern.svg);
     background-position: -4% -2%;
@@ -26,6 +35,8 @@ body{
     width: 100vw;
     overflow-x: hidden;
 }
+
+
 
 header{
     display: flex;
@@ -43,6 +54,9 @@ header .botao{
 .logoIcon{
     width: 8rem;
 }
+
+
+/* #region Menu Hamburguer */
 
 @media only screen and (max-width: 992px) {
 
@@ -63,7 +77,6 @@ nav{
     width: 75vw;
     padding: 2rem;
     border-radius: 10px;
-    transition: all ease-in-out 1s;
 }
 
 nav button{
@@ -75,19 +88,13 @@ nav button{
     transition: all linear 0.1s;
 }
 
-nav button:hover , nav button:target , footer li:hover , footer li:target{
-    opacity: 0.60;
-    scale: 0.99;
-    cursor: pointer;
 }
-}
+
 .openButton{
     position: relative;
     z-index: 999;
     transition: all linear 0.1s;
 }
-
-
 
 .closeButton{
     width: 1.5rem;
@@ -123,6 +130,14 @@ nav button:hover , nav button:target , footer li:hover , footer li:target{
 }
 
 
+/* #endregion*/
+
+nav button:hover , nav button:target , footer li:hover , footer li:target{
+    opacity: 0.50;
+    scale: 0.95;
+    cursor: pointer;
+}
+
 main{
     width: 100vw;
     position: relative;
@@ -139,13 +154,6 @@ main{
     gap: 4rem;
 }
 
-.decoracao1{
-    position: absolute;
-    width: 160%;
-    top: -15%;
-    left: 5%;
-    z-index: 0;
-}
 
 .animacao{
     width: 100%;
@@ -194,14 +202,6 @@ main{
     opacity: 0.75;
     scale: 0.99;
     cursor: pointer;
-}
-
-.decoracao2{
-    position: absolute;
-    width: 100%;
-    top: 15%;
-    left: 60%;
-    z-index: 0;
 }
 
 .diferencial{
@@ -404,12 +404,6 @@ footer li{
     transition: all linear 0.1s;
 }
 
-footer li:hover , footer li:target{
-    opacity: 0.60;
-    scale: 0.99;
-    cursor: pointer;
-}
-
 .redesSociais{
     display: flex;
     justify-content: center;
@@ -418,7 +412,7 @@ footer li:hover , footer li:target{
 
 .redesSociais img{
     width: 2rem;
-    transition: all ease-in-out 0.1s;
+    transition: transform ease-in-out 0.1s;
     cursor: pointer;
 }
 
@@ -456,6 +450,10 @@ footer li:hover , footer li:target{
     filter: brightness(0) saturate(100%) invert(10%) sepia(98%) saturate(7401%) hue-rotate(348deg) brightness(89%) contrast(102%);
     transform: translateY(-0.5rem);
 }
+
+/* #endregion*/
+
+/* #region Tablet*/
 
 @media only screen and (min-width: 600px) {
     body{
@@ -535,7 +533,9 @@ footer li:hover , footer li:target{
     
     
 }
+/* #endregion*/
 
+/* #region Laptop*/
 
 @media only screen and (min-width: 992px) {
 
@@ -581,12 +581,6 @@ footer li:hover , footer li:target{
 
     }
 
-    nav button:hover , nav button:target , footer li:hover , footer li:target{
-        opacity: 0.6;
-        scale: 0.99;
-        cursor: pointer;
-    }
-
     .intro{
         position: relative;
         display: flex;
@@ -595,19 +589,32 @@ footer li:hover , footer li:target{
         align-items: center;
     }
     .animacao{
-        width: 50%;
+        width: 45%;
         z-index: 1;
         position: relative;
     }
 
     .introConteudo {
-        text-align: center;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 1rem;
         position: relative;
-        width: 50%;
+        padding: 0 3.5rem;
+        text-align: center;
+        align-items: flex-start;
+        gap: 1rem;
+        width: 55%;
+    }
+
+    .introConteudo h1{
+        font-weight: 700;
+        color: var(--corSecundaria);
+        font-size: 3rem;
+        z-index: 1;
+        text-align: left;
+    }
+
+    .introConteudo p{
+        text-align: left;
     }
 
     .diferencial{
@@ -644,26 +651,6 @@ footer li:hover , footer li:target{
         counter-reset: section;
     }
 
-    .introConteudo{
-        padding: 0 2.5rem;
-        text-align: center;
-        align-items: flex-start;
-        gap: 1rem;
-        width: 50%;
-    }
-
-    .introConteudo h1{
-        font-weight: 700;
-        color: var(--corSecundaria);
-        font-size: 3rem;
-        z-index: 1;
-        text-align: left;
-    }
-
-    .introConteudo p{
-        text-align: left;
-    }
-
     .encerramento{
         flex-direction: row;
         padding: 0px 2rem;
@@ -674,7 +661,6 @@ footer li:hover , footer li:target{
         color: var(--cinzaClaro);
         font-size: 2rem;
         z-index: 1;
-        max-width: 85%;
         text-align: left;
 
     }
@@ -689,21 +675,14 @@ footer li:hover , footer li:target{
         display: flex;
         flex-direction: row;
         gap: 1rem;
+        padding: 0 2rem;
     }
 
     .pessoas{
         display: flex;
     }
 
-    #pessoa1{
-        display: flex;
-    }
-
-    #pessoa2{
-        display: flex;
-    }
-    
-    #pessoa3{
+    #pessoa1, #pessoa2 , #pessoa3 {
         display: flex;
     }
 
@@ -752,6 +731,10 @@ footer li:hover , footer li:target{
         grid-area: copyright;
     }
 }
+
+/* #endregion*/
+
+/* #region Desktop*/
 
 @media only screen and (min-width: 1200px) {
     body{
@@ -829,4 +812,4 @@ footer li:hover , footer li:target{
     }
 }
 
-
+/* #endregion*/
