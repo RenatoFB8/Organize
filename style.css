@@ -161,7 +161,7 @@ main{
     position: relative;
 }
 
-.introConteudo{
+.introConteudo {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -227,7 +227,6 @@ main{
     font-size: 1.75rem;
     max-width: 90%;
     z-index: 1;
-    counter-reset: section;
 }
 
 .diferencialLista{
@@ -239,7 +238,7 @@ main{
 }
 
 .diferencialLista h3{
-    background-color: var(--laranjaClaro);
+    background-color: var(--cinza);
     width: calc(100vw - 1.5rem);
     font-size: 0.9rem;
     color: var(--corSecundaria);
@@ -293,11 +292,7 @@ main{
     display: flex;
 }
 
-#pessoa2{
-    display: none;
-}
-
-#pessoa3{
+#pessoa2, #pessoa3{
     display: none;
 }
 
@@ -323,7 +318,6 @@ main{
     height: 20rem;
     width: 100vw;
     justify-content: center;
-    position: relative;
 }
 
 .encerramento h1{
@@ -345,7 +339,7 @@ main{
     transition: all linear 0.1s;
 }
 
-.decoracao3{
+.decoracao{
     position: absolute;
     width: 25%;
     top: 20%;
@@ -472,25 +466,17 @@ footer li{
     }
 
     .intro{
-        position: relative;
-        display: flex;
-        gap: 4rem;
         flex-direction: row-reverse;
         align-items: center;
     }
     .animacao{
         width: 50%;
-        z-index: 1;
-        position: relative;
     }
 
     .introConteudo {
-        text-align: center;
-        display: flex;
         flex-direction: column;
         align-items: center;
         gap: 1rem;
-        position: relative;
         width: 50%;
     }
 
@@ -507,10 +493,6 @@ footer li{
 
     .diferencialLista h3{
         font-size: 0.9rem;
-        color: var(--corSecundaria);
-        padding: 0.5rem 0;
-        border-radius: 25px 0 0 25px;
-        white-space: nowrap;
         background-color: transparent;
         width: auto;
     }
@@ -578,38 +560,24 @@ footer li{
         border: none;
         color: var(--corSecundaria);
         transition: all linear 0.1s;
-
     }
 
     .intro{
-        position: relative;
-        display: flex;
-        gap: 4rem;
-        flex-direction: row-reverse;
         align-items: center;
     }
     .animacao{
         width: 45%;
-        z-index: 1;
-        position: relative;
     }
 
     .introConteudo {
-        display: flex;
         flex-direction: column;
-        position: relative;
         padding: 0 3.5rem;
-        text-align: center;
         align-items: flex-start;
-        gap: 1rem;
         width: 55%;
     }
 
     .introConteudo h1{
-        font-weight: 700;
-        color: var(--corSecundaria);
         font-size: 3rem;
-        z-index: 1;
         text-align: left;
     }
 
@@ -618,24 +586,13 @@ footer li{
     }
 
     .diferencial{
-        flex-direction: row;
-        align-items: center;
         padding: 0px 4rem;
         margin: 0 1rem;
     }
 
-    .diferencialLista {
-        width: 50%;
-    }
-
     .diferencialLista h3{
-        font-size: 0.9rem;
-        color: var(--corSecundaria);
+        font-size: 1rem;
         padding: 0.5rem 0;
-        border-radius: 25px 0 0 25px;
-        white-space: nowrap;
-        background-color: transparent;
-        width: auto;
     }
 
     .diferencialTextos{
@@ -643,12 +600,7 @@ footer li{
     }
 
     .diferencialTextos h2 , .comentarios h2{
-        font-weight: 700;
-        color: var(--corSecundaria);
         font-size: 2rem;
-        max-width: 90%;
-        z-index: 1;
-        counter-reset: section;
     }
 
     .encerramento{
@@ -657,12 +609,7 @@ footer li{
     }
 
     .encerramento h1{
-        font-weight: 700;
-        color: var(--cinzaClaro);
-        font-size: 2rem;
-        z-index: 1;
         text-align: left;
-
     }
 
     .botaoInvertido{
@@ -695,7 +642,7 @@ footer li{
         background-position: -8rem 0;
     }
 
-    .decoracao3{
+    .decoracao{
         display: none;
     }
 
@@ -754,49 +701,28 @@ footer li{
     }
 
     header .botao{
-        width: 10%;
         padding: 1rem 1.25rem;
         font-size: 0.8rem;
-        display: block;
     }
 
     nav{
-        display: flex;
-        justify-content: space-between;
         width: 30rem;
-        font-weight: 700;
     }
 
     nav button{
-        background-color: transparent;
-        border: none;
-        color: var(--corSecundaria);
-        transition: all linear 0.1s;
         font-size: 1rem;
     }
 
     .introConteudo h1{
-        font-weight: 700;
-        color: var(--corSecundaria);
         font-size: 4rem;
-        z-index: 1;
-        text-align: left;
     }
 
     .introConteudo p, .diferencialTextos p, .comentarios p{
-        color: var(--cinza);
-        z-index: 1;
-        max-width: 80%;
         font-size: 1.5rem;
     }
 
     .diferencialTextos h2 , .comentarios h2{
-        font-weight: 700;
-        color: var(--corSecundaria);
         font-size: 3rem;
-        max-width: 90%;
-        z-index: 1;
-        counter-reset: section;
     }
 
     .diferencialLista h3{
